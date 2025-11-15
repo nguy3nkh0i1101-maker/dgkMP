@@ -50,7 +50,7 @@ let songs = [
         album: "Beauty in Death",
         albumArtUrl: "img/OIP.webp",
         audioSrc: "audio/Đường Một Chiều - Haozi X Denver remix (mp3cut.net).mp3",
-        videoBgSrc: "videos/ĐƯỜNG MỘT CHIỀU ( HAOZI & DENVER REMIX ) NHẠC HOT TIKTOK.mp4", // Path video background khusus lagu ini
+        videoBgSrc: "https://drive.google.com/uc?export=download&id=12rKB9mneZWXG1ONJSD-XYtnlX3gMrzqE", // Path video background khusus lagu ini
         // Lirik dengan timestamp dalam detik
         lyrics: [
             { time: 0, text: "~" },
@@ -97,7 +97,7 @@ let songs = [
         album: "÷ (Divide)",
         albumArtUrl: "img/wxrdie.webp",
         audioSrc: "audio/Trở Về (mp3cut.net).mp3",
-        videoBgSrc: "videos/Wxrdie - TRỞ VỀ (ft. JustaTee) [prod. by Phongkhin] _ OFFICIAL MV (online-video-cutter.com).mp4", // Path video background khusus lagu ini
+        videoBgSrc: "https://drive.google.com/uc?export=download&id=1KMm2AeUSD83YzbDRvKk-yx5ddeam1IOc", // Path video background khusus lagu ini
         // Lirik dengan timestamp dalam detik
         lyrics: [
             { time: 0, text: "~" },
