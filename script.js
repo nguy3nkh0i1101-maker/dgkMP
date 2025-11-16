@@ -97,7 +97,7 @@ let songs = [
         album: "÷ (Divide)",
         albumArtUrl: "img/wxrdie.webp",
         audioSrc: "audio/Trở Về (mp3cut.net).mp3",
-        videoBgSrc: "videos/Wxrdie - TRỞ VỀ (ft. JustaTee) [prod. by Phongkhin] _ OFFICIAL MV (online-video-cutter.com) (1).mp4, // Path video background khusus lagu ini
+        videoBgSrc: "videos/Wxrdie - TRỞ VỀ (ft. JustaTee) [prod. by Phongkhin] _ OFFICIAL MV (online-video-cutter.com) (1).mp4", // Path video background khusus lagu ini
         // Lirik dengan timestamp dalam detik
         lyrics: [
             { time: 0, text: "~" },
