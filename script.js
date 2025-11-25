@@ -1,4 +1,42 @@
-    // DOM Elements
+// WORD ANIMATION (4 cụm chữ)
+const words = [
+    document.querySelector(".w1"),
+    document.querySelector(".w2"),
+    document.querySelector(".w3"),
+    document.querySelector(".w4")
+];
+
+setTimeout(() => {
+    document.querySelector(".intro-title").style.opacity = "1";
+}, 800);
+
+words.forEach((w, i) => {
+    setTimeout(() => {
+        w.style.opacity = "1";
+        w.style.transform = "translateX(0)";
+    }, 900 + i * 450);
+});
+
+// TYPING EFFECT cho 🌐 dgk-mp.vercel.app/
+const text = "🌐 dgk-mp.vercel.app/";
+let i = 0;
+
+function typeLink() {
+    if (i < text.length) {
+        document.getElementById("typed").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeLink, 70);
+    }
+}
+
+setTimeout(typeLink, 3200);
+
+// Fade intro -> show web
+setTimeout(() => {
+    document.getElementById("main-content").style.display = "block";
+}, 5100);
+
+// DOM Elements
 const homePage = document.getElementById('homePage');
 const songDetailPage = document.getElementById('songDetailPage');
 const playerPage = document.getElementById('playerPage');
@@ -97,7 +135,7 @@ let songs = [
         album: "Beauty in Death",
         albumArtUrl: "img/OIP.webp",
         audioSrc: "audio/Đường Một Chiều - Haozi X Denver remix (mp3cut.net).mp3",
-        videoBgSrc: "videos/ĐƯỜNG MỘT CHIỀU ( HAOZI & DENVER REMIX ) NHẠC HOT TIKTOK (1) (1) (online-video-cutter.com).mp4", // Path video background khusus lagu ini
+        videoBgSrc: "img/58788.png", // Path video background khusus lagu ini
         // Lirik dengan timestamp dalam detik
         lyrics: [
             { time: 0, text: "~" },
@@ -199,127 +237,155 @@ let songs = [
         ]
     },    
     {
-        id: 3,
-        title: "Unconditionally",
-        artist: "Katy Perry",
+  id: 3,
+        title: "Lúc Nhỏ",
+        artist: "Kidz",
         album: "Prism",
-        albumArtUrl: "https://i.ytimg.com/vi/4NGVxU0qhZ8/maxresdefault.jpg",
-        audioSrc: "audio/Katy Perry - Unconditionally.mp3",
+        albumArtUrl: "img/lucnho.webp",
+        audioSrc: "audio/luc nho.mp3",
         videoBgSrc: "videos/unconditionally_bg.mp4", // Path video background khusus lagu ini
         // Lirik dengan timestamp dalam detik
         lyrics: [
-            { time: 1000, text: "Oh no, did I get too close?" },
-            { time: 1000, text: "Oh, did I almost see what's really on the inside?" },
-            { time: 1000, text: "All your insecurities" },
-            { time: 1000, text: "All the dirty laundry" },
-            { time: 1000, text: "Never made me blink one time" },
-            { time: 1000, text: "Unconditional, unconditionally" },
-            { time: 1000, text: "I will love you unconditionally" },
-            { time: 1000, text: "There is no fear now" },
-            { time: 1000, text: "Let go and just be free" },
-            { time: 1000, text: "I will love you unconditionally" },
-            { time: 1000, text: "So come just as you are to me" },
-            { time: 1000, text: "Don't need apologies" },
-            { time: 1000, text: "Know that you are worthy" },
-            { time: 1000, text: "I'll take your bad days with your good" },
-            { time: 1000, text: "Walk through the storm, I would" },
-            { time: 1000, text: "I'd do it all because I love you" },
-            { time: 1000, text: "I love you" },
-            { time: 1000, text: "Unconditional, unconditionally" },
-            { time: 1000, text: "I will love you unconditionally" },
-            { time: 1000, text: "There is no fear now" },
-            { time: 1000, text: "Let go and just be free" },
-            { time: 1000, text: "I will love you unconditionally" },
-            { time: 1000, text: "So open up your heart and just let it begin" },
-            { time: 1000, text: "Open up your heart and just let it begin" },
-            { time: 1000, text: "Open up your heart and just let it begin" },
-            { time: 1000, text: "Open up your heart" },
-            { time: 1000, text: "Acceptance is the key to be" },
-            { time: 1000, text: "To be truly free" },
-            { time: 1000, text: "Will you do the same for me?" },
-            { time: 1000, text: "Unconditional, unconditionally" },
-            { time: 1000, text: "I will love you unconditionally" },
-            { time: 1000, text: "There is no fear now" },
-            { time: 1000, text: "Let go and just be free" },
-            { time: 1000, text: "I will love you unconditionally" },
-            { time: 1000, text: "I will love you (Unconditionally)" },
-            { time: 1000, text: "I will love you" },
-            { time: 1000, text: "I will love you unconditionally" }
+            { time: 5, text: "Lúc nhỏ tao tin là có ông già Noel" },
+            { time: 7.5, text: "Nghĩ năm nào ổng cũng xuất hiện cho tao bộ đồ mô đen" },
+            { time: 10.5, text: "Ah, Lúc nhỏ tao thường thích xem mấy hoạt hình" },
+            { time: 13.3, text: "Vì câu truyện ở trong kịch bản, nó sẽ không có những cô gạt tình" },
+            { time: 16.7, text: "Doraemon tao thích cánh chong chóng bay" },
+            { time: 19.1, text: "Tao có thể nhảy lên thật cao để nhìn bầu trời ngắm mây" },
+            { time: 22, text: "Siêu anh hùng còn là thần tượng vì họ luôn vì công lý" },
+            { time: 25, text: "Thanh trừng và mang cái ác tan biến theo làn không khí" },
+            { time: 28, text: "Những món đồ chơi mẹ tặng, tao từng xem nó là bạn thân" },
+            { time: 31.6, text: "Tuy không biết nói chuyện, cũng không khiến ai thành nạn nhân" },
+            { time: 34.5, text: "Buồn vui hay có tâm sự chỉ nó mới chịu lắng nghe" },
+            { time: 37.6, text: "Ôm nó chặt vào lòng khi uống những vị thuốc đắng the" },
+            { time: 40.4, text: "Thời mẫu giáo đâu ai quan tâm mày mập gầy đẹp xấu lùn cao" },
+            { time: 43.8, text: "Còn bây giờ bạn bè, chia phe mà ở cùng nhau" },
+            { time: 46.5, text: "Cái thời chưa biết trái táo, ngây thơ như Adam và Eva" },
+            { time: 49.5, text: "Sau này cầm phải trái táo, cả con nít còn khoe nó phê pha" },
+            { time: 53, text: "Thời đó chưa khai thác đất, xung quanh còn nhiều sân cỏ rộng" },
+            { time: 55.5, text: "Thành phố vẫn chưa ô nhiễm, hái trứng cá an tâm mà bỏ họng" },
+            { time: 59.3, text: "Nhớ những lần trốn học, ngồi quán net chơi GTA" },
+            { time: 62, text: "Sau đó là những trận đòn, mỗi lần nhẹ ba mẹ chỉ qua la" },
+            { time: 65, text: "Ngày đó là tháng năm vui, cả oxy cũng dễ thở" },
+            { time: 68, text: "Không có giống bây giờ, thuở ngày xưa thì ai cũng cởi mở" },
+            { time: 71.3, text: "Cảm ơn những khoảnh khắc đó đã theo tao vẫn không rời" },
+            { time: 74, text: "Tao khác mấy thằng ngoài kia, vì tao đây có tuổi thơ ở trong đời" },
+            { time: 77, text: "~" },
+            { time: 89.5, text: "Hồi đó tao tin vào mấy điều ước" },
+            { time: 91.5, text: "Nghĩ rằng mấy nguyện vọng sau này tao lớn là sẽ có thật" },
+            { time: 95.8, text: "Chức quyền cao làm chỗ nhà nước" },
+            { time: 97.5, text: "Kiếm thật nhiều tiền đối với sức khỏe thì không có cực" },
+            { time: 100.5, text: "Nhưng lớn thì tao mới hiểu không có gì trên đời miễn phí" },
+            { time: 103.6, text: "Lý lẽ của mày có hay, cũng phải đứng sau cái số tiền tỉ" },
+            { time: 106.5, text: "Có vài mối tình đầu đời, tao cứ nghĩ là sẽ hoàn mỹ" },
+            { time: 109.5, text: "Nhưng rồi tao mới nhận ra, không có gì là dễ dàng nhỉ" },
+            { time: 112.5, text: "Tao vẫn đua trên dòng thời gian, đôi tay có mấy sợi chỉ" },
+            { time: 115, text: "Nên không cho phép nói mấy lời than, tao không để mình mắc nợ quỷ" },
+            { time: 118.5, text: "Thứ kiếm về là từ động lực, đâu nhất thiết phải bán linh hồn" },
+            { time: 121.6, text: "Cứ xem tao thằng sợ chết, vì tao rất quý ngày tháng sinh tồn" },
+            { time: 124.5, text: "Không hứng thú về mấy tin đồn, nếu có thiệt phải chính mắt thấy" },
+            { time: 127.8, text: "Đừng nghĩ tụi mình là bạn chỉ đi qua vài cuộc nhắc máy" },
+            { time: 130.9, text: "Cuộc đời nó không màu hồng, nhưng nó có 7 sắc cầu vồng" },
+            { time: 133.9, text: "Đứng lên từ nơi vấp ngã, mới học nhiều thứ còn khắc vào lòng" },
+            { time: 137, text: "Công việc vẫn còn chất đống, thời gian rảnh nên viết vài dòng" },
+            { time: 139.9, text: "Lòng người mà có mua được thì tao không ngại phải tiếc vài đồng" }
         ]
     },
     {
         id: 4,
-        title: "Rewrite the Stars",
-        artist: "James Arthur & Anne-Marie",
+        title: "Cold Don't",
+        artist: "Nmọc",
         album: "The Greatest Showman: Reimagined",
-        albumArtUrl: "https://i.ytimg.com/vi/BqGCJUXEqxQ/maxresdefault.jpg",
-        audioSrc: "audio/Rewrite The Stars - James Arthur feat. Anne Marie.mp3",
+        albumArtUrl: "img/cold dont.jpg",
+        audioSrc: "audio/cold dont.mp3",
         videoBgSrc: "videos/rewrite_the_stars_bg.mp4",
         lyrics: [
-            { time: 1000, text: "You know I want you" },
-            { time: 1000, text: "It's not a secret I try to hide" },
-            { time: 100000, text: "You know you want me" },
-            { time: 1000, text: "So don't keep sayin' our hands are tied" },
-            { time: 1000, text: "You claim it's not in the cards" },
-            { time: 1000, text: "And fate is pullin' you miles away and out of reach from me" },
-            { time: 1000, text: "But you're here in my heart" },
-            { time: 1000, text: "So who can stop me if I decide that you're my destiny?" },
-            { time: 1000, text: "What if we rewrite the stars?" },
-            { time: 1000, text: "Say you were made to be mine" },
-            { time: 1000, text: "Nothin' could keep us apart" },
-            { time: 1000, text: "You'd be the one I was meant to find" },
-            { time: 1000, text: "It's up to you and it's up to me" },
-            { time: 1000, text: "No one can say what we get to be" },
-            { time: 1000, text: "So why don't we rewrite the stars?" },
-            { time: 1000, text: "Maybe the world could be ours tonight" },
-            { time: 1000, text: "Ah-oh (No, no, no, no)" },
-            { time: 1000, text: "Ah-oh (Mm)" },
-            { time: 1000, text: "You think it's easy" },
-            { time: 1000, text: "You think I don't wanna run to you, yeah" },
-            { time: 1000, text: "But there are mountains (There are mountains)" },
-            { time: 1000, text: "And there are doors that we can't walk through" },
-            { time: 1000, text: "I know you're wonderin' why" },
-            { time: 1000, text: "Because we're able to be just you and me within these walls" },
-            { time: 1000, text: "But when we go outside" },
-            { time: 1000, text: "You're gonna wake up and see that it was hopeless after all" },
-            { time: 1000, text: "No one can rewrite the stars" },
-            { time: 1000, text: "How can you say you'll be mine?" },
-            { time: 1000, text: "Everything keeps us apart" },
-            { time: 1000, text: "And I'm not the one you were meant to find" },
-            { time: 1000, text: "It's not up to you, it's not up to me" },
-            { time: 1000, text: "When everyone tells us what we can be" },
-            { time: 1000, text: "And how can we rewrite the stars?" },
-            { time: 1000, text: "Say that the world can be ours tonight" },
-            { time: 1000, text: "All I want is to fly with you" },
-            { time: 1000, text: "All I want is to fall with you" },
-            { time: 1000, text: "So just give me all of you" },
-            { time: 1000, text: "It feels impossible" },
-            { time: 1000, text: "It's not impossible" },
-            { time: 1000, text: "Is it impossible?" },
-            { time: 1000, text: "Say that it's possible" },
-            { time: 1000, text: "How do we rewrite the stars?" },
-            { time: 1000, text: "Say you were made to be mine" },
-            { time: 1000, text: "And nothin' could keep us apart" },
-            { time: 1000, text: "'Cause you are the one I was meant to find" },
-            { time: 1000, text: "It's up to you and it's up to me" },
-            { time: 1000, text: "No one could say what we get to be" },
-            { time: 1000, text: "And why don't we rewrite the stars?" },
-            { time: 1000, text: "Changin' the world to be ours" },
-            { time: 1000, text: "Ah-oh (No, no, no, no)" },
-            { time: 1000, text: "Ah-oh (Mm)" },
-            { time: 1000, text: "You know I want you" },
-            { time: 1000, text: "It's not a secret I try to hide" },
-            { time: 1000, text: "But I can't have you" },
-            { time: 1000, text: "We're bound to break and my hands are tied" }
+            { time: 0, text: "~" },
+            { time: 7.8, text: "Vì ta đâu muốn hai con tim rối bời" },
+            { time: 10.3, text: "Lên xe anh đi vì trời đã tối rồi" },
+            { time: 12.6, text: "Anh không muốn trái tim em phận cô đơn" },
+            { time: 14.9, text: "Anh chỉ muốn ta lại gần nhau hơn" },
+            { time: 17, text: "Chúng ta đâu muốn lại chia xa cách lòng" },
+            { time: 19, text: "Giống khi anh viết về em mấy dòng" },
+            { time: 21.2, text: "Trên con đường nhưng mà mình bên nhau" },
+            { time: 23.5, text: "Đi với em đến tận đêm thâu" },
+            { time: 26, text: "Oh-oh" },
+            { time: 27, text: "Anh cũng chỉ muốn ở bên em vào tối nay" },
+            { time: 29.7, text: "Dù người ở đâu thì anh vẫn chờ" },
+            { time: 31.6, text: "Giá như cơn giông kia cuốn trôi em đến đây" },
+            { time: 34, text: "Dù là điều này xuất hiện trong mơ" },
+            { time: 36, text: "Ta sẽ chìm đắm trong điệu nhạc này mỗi giây" },
+            { time: 38.5, text: "Rồi cùng nhìn ngắm mây nhưng đâu ngờ" },
+            { time: 40.4, text: "I'm fallin' down, you break my soul" },
+            { time: 44.8, text: "Em đã dịu dàng lại còn hay nở nụ cười" },
+            { time: 46.9, text: "Đó là lần đầu mà anh đắm say một người" },
+            { time: 49, text: "Ánh mắt tựa ngàn vì sao sáng trên bầu trời" },
+            { time: 51, text: "Em đã hoàn toàn làm gục ngã gã sầu đời" },
+            { time: 53.4, text: "Yeah, I'm better by myself" },
+            { time: 55.5, text: "Em phải để anh chờ bao lâu?" },
+            { time: 58, text: "Anh không muốn ta phải xa nhau" },
+            { time: 60, text: "Bởi vì ta đâu muốn hai con tim rối bời" },
+            { time: 62.6, text: "Lên xe anh đi vì trời đã tối rồi" },
+            { time: 64.8, text: "Anh muốn con tim em phận cô đơn" },
+            { time: 67.1, text: "Anh chỉ muốn ta lại gần nhau hơn" },
+            { time: 69, text: "Chúng ta đâu muốn ai lại chia xa cách lòng" },
+            { time: 71.5, text: "Giống như anh viết về em mấy dòng" },
+            { time: 73.5, text: "Trên con đường mà mình bên nhau" },
+            { time: 75.9, text: "Đi với em đến tận đêm thâu" },
+            { time: 78, text: "Oh-oh" },
+            { time: 78.5, text: "Giấc mơ êm đềm nơi bình yên anh thấy em" },
+            { time: 80.5, text: "Trái tim cằn khô lại một lần được tìm đến" },
+            { time: 82.9, text: "Ánh mắt ta chạm vào hoàng hôn nắng chiều tàn" },
+            { time: 85, text: "Thế giới trong anh, bóng đêm nhưng rục sáng" },
+            { time: 87, text: "Và chỉ muốn sau này ta vẫn sẽ có nhau" },
+            { time: 89.4, text: "Dẫu bao đắng cay vẫn như lúc ban đầu" },
+            { time: 91.5, text: "Sẽ không để em buồn vì chuyện của đôi ta" },
+            { time: 96, text: "Vì em là thế giới chữa tổn thương trong lòng anh dù quá khứ đã chia xa chúng ta" },
+            { time: 105, text: "Nhưng anh vẫn mong muốn cho tương lai ta về sau vẫn bên nhau" },
+            { time: 111, text: "Vì anh vẫn muốn như thế" },
+            { time: 113, text: "Giấc mơ kia sẽ qua thôi, nỗi đau cũng sẽ buông xuôi" },
+            { time: 117, text: "Chiếc hôn kia cũng sát gần để anh được đến bên em" },
+            { time: 121.8, text: "Sẽ không làm lệ hoen mi, vì em anh chẳng cần tiếc gÌ" },
+            { time: 126.5, text: "Để cho tình ta sẽ như ngày đầu" },
+            { time: 130.3, text: "(Giống như, giống như vậy)" },
+            { time: 132, text: "Đôi mắt của em mang màu xanh của đại dương" },
+            { time: 134, text: "Nhìn em lần đầu anh trót yêu rồi lại thương" },
+            { time: 136.5, text: "Felling so deep, nụ cười thân thương" },
+            { time: 138.5, text: "Anh như nhận ra ta đã yêu nhau từ kiếp trước" },
+            { time: 140.9, text: "Không cần phải nói đắm chìm thật lâu" },
+            { time: 142.8, text: "Same frequency, chung nhịp từ lâu" },
+            { time: 145, text: "Bao lừa dối khiến em thật đau" },
+            { time: 147, text: "Và sẽ biến tan khi mà ta gần nhau" },
+            { time: 149.7, text: "Tình như mơ và nhiều ý thơ" },
+            { time: 152, text: "Thuyền ta trôi về nơi xa bờ" },
+            { time: 154, text: "Được bên em vào từng phút giây" },
+            { time: 156, text: "Làm con tim này thêm day dứt" },
+            { time: 158, text: "Nhiều lần gục ngã, I'm falling down" },
+            { time: 160.5, text: "Nên trái tim hơi quặn đau" },
+            { time: 162.5, text: "Men rượu khiến anh chẳng tỉnh táo" },
+            { time: 165.5, text: "Lý do anh đậm sâu" },
+            { time: 167, text: "Vì ta đâu muốn hai con tim rối bời" },
+            { time: 169.8, text: "Lên xe anh đi vì trời đã tối rồi" },
+            { time: 171.7, text: "Anh không muốn em trên con đường cô đơn" },
+            { time: 174, text: "Anh chỉ muốn ta lại gần nhau hơn" },
+            { time: 176, text: "Chúng ta đâu muốn lại chia xa cách lòng" },
+            { time: 178.5, text: "Giống khi anh viết về em mấy dòng" },
+            { time: 180.5, text: "Trên con đường mà mình bên nhau" },
+            { time: 182.7, text: "Đi với em đến tận đêm thâu" },
+            { time: 185.7, text: "Oh-oh" },
+            { time: 186.9, text: "Em chẳng thể biết khi anh lẻ loi" },
+            { time: 189, text: "Dù cho có biết thì cũng kệ thôi" },
+            { time: 191.8, text: "Bởi vì đã muộn rồi" },
+            { time: 194, text: "Hai linh hồn chia cắt" }
         ]
     },
     {
         id: 5,
-        title: "Message in Bottle",
-        artist: "taylor swift",
+        title: "Chịu Cách Mình Nói Thua",
+        artist: "RHYDER",
         album: "OK Computer",
-        albumArtUrl: "https://www.songmeaningsandfacts.com/wp-content/uploads/2022/11/Message-in-a-Bottle-by-Taylor-Swift.jpg",
-        audioSrc: "audio/bocil.mp3",
+        albumArtUrl: "img/chiucachminhnoithua.webp",
+        audioSrc: "audio/chiucachminhnoithua.mp3",
         videoBgSrc: "videos/bocil.mp4",
         lyrics: [
             { time: 1000, text: "Cause you could be the one that I love" },
@@ -334,11 +400,11 @@ let songs = [
     },
     {
         id: 6,
-        title: "Somebody's Pleasure",
-        artist: "Aziz Hedra",
+        title: "Nói Dối",
+        artist: "Ronboogz",
         album: "Unreleased",
-        albumArtUrl: "https://tse3.mm.bing.net/th?id=OIP.5fDFhJU8ZYGRlPD4ffPlgAHaHa&pid=Api&P=0&h=220",
-        audioSrc: "audio/Somebodys Pleasure.mp3",
+        albumArtUrl: "img/noi doi.jpg",
+        audioSrc: "audio/noi doi.mp3",
         videoBgSrc: "videos/somebodys_pleasure_bg.mp4",
         lyrics: [
             { time: 1000, text: "I've been too busy ignoring and hiding" },
@@ -392,11 +458,11 @@ let songs = [
     },
     {
         id: 7,
-        title: "I Wanna Be Yours",
-        artist: "Arctic Monkeys",
+        title: "Bạn Đời",
+        artist: "Karick. GDucky",
         album: "AM",
-        albumArtUrl: "https://i.ytimg.com/vi/fJLQCf4mFP0/hqdefault.jpg",
-        audioSrc: "audio/I Wanna Be Yours.mp3",
+        albumArtUrl: "img/ban doi.jpg",
+        audioSrc: "audio/ban doi.mp3",
         videoBgSrc: "videos/i_wanna_be_yours_bg.mp4",
         lyrics: [
             { time: 1000, text: "I wanna be your vacuum cleaner" },
@@ -440,11 +506,11 @@ let songs = [
     },
     {
         id: 8,
-        title: "Welcome and Goodbye",
-        artist: "Dream, Ivory",
+        title: "Thằng Điên",
+        artist: "Phương Ly, JustaTee",
         album: "Welcome and Goodbye",
-        albumArtUrl: "",
-        audioSrc: "audio/dream_ivory_welcome_and_goodbye.mp3",
+        albumArtUrl: "img/thang dien.jpg",
+        audioSrc: "audio/thang dien.mp3",
         videoBgSrc: "videos/welcome_and_goodbye_bg.mp4",
         lyrics: [
             { time: 1000, text: "Through it all once again, came to know my only friend" },
@@ -462,11 +528,11 @@ let songs = [
     },
     {
         id: 9,
-        title: "Let Down",
-        artist: "Radiohead",
+        title: "Thêm Bao Nhiêu Lâu",
+        artist: "Đạt G",
         album: "OK Computer",
-        albumArtUrl: "",
-        audioSrc: "audio/radiohead_let_down.mp3",
+        albumArtUrl: "img/them bnh lau.jpg",
+        audioSrc: "audio/them bnh lau.mp3",
         videoBgSrc: "videos/let_down_bg.mp4",
         lyrics: [
             { time: 1000, text: "Transport, motorways and tramlines" },
@@ -494,11 +560,11 @@ let songs = [
     },
     {
         id: 10,
-        title: "Mr Loverman",
-        artist: "Ricky Montgomery",
+        title: "Anh Muốn Nhìn Thấy Em",
+        artist: "The Wind, Dangrangto",
         album: "Montgomery Ricky",
-        albumArtUrl: "",
-        audioSrc: "audio/ricky_montgomery_mr_loverman.mp3",
+        albumArtUrl: "img/anh muon nhin thay em.jpg",
+        audioSrc: "audio/anh muon nhin thay em.mp3",
         videoBgSrc: "videos/mr_loverman_bg.mp4",
         lyrics: [
             { time: 1000, text: "I'm headed straight for the floor" },
@@ -527,11 +593,11 @@ let songs = [
     },
     {
         id: 11,
-        title: "Where We Are",
-        artist: "One Direction",
+        title: "Lối Sống",
+        artist: "Wxrdie",
         album: "Midnight Memories (Deluxe Edition)",
-        albumArtUrl: "",
-        audioSrc: "audio/one_direction_where_we_are.mp3",
+        albumArtUrl: "img/wxrdie.webp",
+        audioSrc: "audio/loi song.mp3",
         videoBgSrc: "videos/where_we_are_bg.mp4",
         lyrics: [
             { time: 1000, text: "Remember when we would stay out too late" },
@@ -558,11 +624,11 @@ let songs = [
     },
     {
         id: 12,
-        title: "Let Down",
-        artist: "Radiohead",
+        title: "Simp Gái 808",
+        artist: "Low G",
         album: "OK Computer",
-        albumArtUrl: "https://images.genius.com/ea1fda114f5091bce67f87cf8437b647.1000x1000x1.png",
-        audioSrc: "audio/letdown.mp3",
+        albumArtUrl: "img/simp girl.jpg",
+        audioSrc: "audio/simp girl 808.mp3",
         videoBgSrc: "videos/letdown.mp4",
         lyrics: [
             { time: 0.2  ,  text: "Floor collapsing Floating" },
@@ -575,6 +641,160 @@ let songs = [
             { time: 33, text: "Crushed like a bug in the ground" },
             { time: 40, text: "Let down and hanging around" }
 
+        ]
+    },
+    {
+        id: 13,
+        title: "Waiting ...",
+        artist: "Waiting ...",
+        album: "Waiting ...",
+        albumArtUrl: "img/OIP.webp",
+        audioSrc: "",
+        videoBgSrc: "",
+        lyrics: [
+            { time: 1000, text: "." },
+            { time: 1000, text: "." },
+            { time: 1000, text: "." }
+        ]
+    },
+    {
+        id: 14,
+        title: "Waiting ...",
+        artist: "Waiting ...",
+        album: "Waiting ...",
+        albumArtUrl: "img/OIP.webp",
+        audioSrc: "",
+        videoBgSrc: "",
+        lyrics: [
+            { time: 1000, text: "." },
+            { time: 1000, text: "." },
+            { time: 1000, text: "." }
+        ]
+    },
+    {
+        id: 15,
+        title: "Waiting ...",
+        artist: "Waiting ...",
+        album: "Waiting ...",
+        albumArtUrl: "img/OIP.webp",
+        audioSrc: "",
+        videoBgSrc: "",
+        lyrics: [
+            { time: 1000, text: "." },
+            { time: 1000, text: "." },
+            { time: 1000, text: "." }
+        ]
+    },
+    {
+        id: 16,
+        title: "Waiting ...",
+        artist: "Waiting ...",
+        album: "Waiting ...",
+        albumArtUrl: "img/OIP.webp",
+        audioSrc: "",
+        videoBgSrc: "",
+        lyrics: [
+            { time: 1000, text: "." },
+            { time: 1000, text: "." },
+            { time: 1000, text: "." }
+        ]
+    },
+    {
+        id: 17,
+        title: "Waiting ...",
+        artist: "Waiting ...",
+        album: "Waiting ...",
+        albumArtUrl: "img/OIP.webp",
+        audioSrc: "",
+        videoBgSrc: "",
+        lyrics: [
+            { time: 1000, text: "." },
+            { time: 1000, text: "." },
+            { time: 1000, text: "." }
+        ]
+    },
+    {
+        id: 18,
+        title: "Waiting ...",
+        artist: "Waiting ...",
+        album: "Waiting ...",
+        albumArtUrl: "img/OIP.webp",
+        audioSrc: "",
+        videoBgSrc: "",
+        lyrics: [
+            { time: 1000, text: "." },
+            { time: 1000, text: "." },
+            { time: 1000, text: "." }
+        ]
+    },
+    {
+        id: 19,
+        title: "Waiting ...",
+        artist: "Waiting ...",
+        album: "Waiting ...",
+        albumArtUrl: "img/OIP.webp",
+        audioSrc: "",
+        videoBgSrc: "",
+        lyrics: [
+            { time: 1000, text: "." },
+            { time: 1000, text: "." },
+            { time: 1000, text: "." }
+        ]
+    },
+    {
+        id: 20,
+        title: "Waiting ...",
+        artist: "Waiting ...",
+        album: "Waiting ...",
+        albumArtUrl: "img/OIP.webp",
+        audioSrc: "",
+        videoBgSrc: "",
+        lyrics: [
+            { time: 1000, text: "." },
+            { time: 1000, text: "." },
+            { time: 1000, text: "." }
+        ]
+    },
+    {
+        id: 21,
+        title: "Waiting ...",
+        artist: "Waiting ...",
+        album: "Waiting ...",
+        albumArtUrl: "img/OIP.webp",
+        audioSrc: "",
+        videoBgSrc: "",
+        lyrics: [
+            { time: 1000, text: "." },
+            { time: 1000, text: "." },
+            { time: 1000, text: "." }
+        ]
+    },
+    {
+        id: 22,
+        title: "Waiting ...",
+        artist: "Waiting ...",
+        album: "Waiting ...",
+        albumArtUrl: "img/OIP.webp",
+        audioSrc: "",
+        videoBgSrc: "",
+        lyrics: [
+            { time: 1000, text: "." },
+            { time: 1000, text: "." },
+            { time: 1000, text: "." }
+        ]
+    },
+    {
+        id: 23,
+        title: "Waiting ...",
+        artist: "Waiting ...",
+        album: "Waiting ...",
+        albumArtUrl: "img/OIP.webp",
+        audioSrc: "",
+        videoBgSrc: "",
+        lyrics: [
+            { time: 1000, text: "." },
+            { time: 1000, text: "." },
+            { time: 1000, text: "." }
         ]
     },
 ];
@@ -1016,46 +1236,6 @@ fullscreenBtn.addEventListener('click', () => {
         fullscreenBtn.innerHTML = '<i class="fa-solid fa-expand"></i>';
     }
 });
-
-// ===== THEME TOGGLE FUNCTION =====
-const themeSwitch = document.getElementById("themeSwitch");
-
-// Load theme đã lưu
-if (localStorage.getItem("theme") === "light") {
-  document.body.classList.add("light");
-  themeSwitch.checked = true;
-}
-
-// Click để bật/tắt
-themeSwitch.addEventListener("change", () => {
-  if (themeSwitch.checked) {
-    document.body.classList.add("light");
-    localStorage.setItem("theme", "light");
-  } else {
-    document.body.classList.remove("light");
-    localStorage.setItem("theme", "dark");
-  }
-});
-
-// ===== INTRO TYPING EFFECT =====
-// Typing text
-const typingText = "dgk-mp.vercel.app";
-let i = 0;
-
-function introTypeEffect() {
-  if (i < typingText.length) {
-    document.querySelector(".typing").textContent += typingText.charAt(i);
-    i++;
-    setTimeout(introTypeEffect, 80);
-  }
-}
-
-setTimeout(introTypeEffect, 1800);
-
-// Sau 5.5s tắt intro hẳn
-setTimeout(() => {
-  document.getElementById("intro").style.display = "none";
-}, 5500);
 
 // Theme Toggle Functionality - Removed, using single default theme
 
