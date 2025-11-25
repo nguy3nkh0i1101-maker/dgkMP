@@ -10,25 +10,26 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
-    <div id="intro">
-        <div class="intro-content">
-            <h1 class="intro-title">
-                <span>W</span><span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span>
-            </h1>
-
-            <div class="intro-icons">
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-github"></i>
-                <i class="fab fa-tiktok"></i>
-            </div>
-
-            <div class="intro-input">
-                <i class="fas fa-globe"></i>
-                <span class="typing"></span><span class="cursor">|</span>
-            </div>
-        </div>
+<div id="intro">
+    <div class="intro-icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-tiktok"></i>
     </div>
 
+    <h1 class="intro-title">
+        <span class="word w1">Welcome</span>
+        <span class="word w2">to</span><br>
+        <span class="word w3">my</span>
+        <span class="word w4">website</span>
+    </h1>
+
+    <div class="intro-input">
+        <span id="typed"></span><span class="cursor"></span>
+    </div>
+</div>
+
+<div id="main-content" style="display:none;">
     <div class="video-background-container">
         <video id="backgroundVideo" autoplay loop muted playsinline>
             </video>
@@ -54,17 +55,12 @@
 
 
         </div>
-
-        <div class="theme-toggle">
-            <input type="checkbox" id="themeSwitch">
-            <label for="themeSwitch" class="toggle-btn"></label>
-        </div>
     </div>
 
     <div id="homePage" class="page active">
         <header>
             <h1 class="brand-title">
-                <span>DGK</span><span>Chelsea</span><span>FC</span><span>
+                <span>C</span><span>h</span><span>e</span><span>l</span><span>s</span><span>e</span><span>a</span><span>F</span><span>C</span><span>
             </h1>
             <p class="brand-subtitle">
                 <div id="text"></div>
@@ -122,7 +118,7 @@
                         <div class="time-display-player">
                             <span id="playerCurrentTime">0:00</span>
                             <span id="playerTotalDuration">0:00</span>
-                        </div> 
+                        </div>
                     </div>
 
                     <div class="main-controls-player">
@@ -176,11 +172,10 @@
 
     <!-- User Bubble Message -->
     <div class="user-bubble">
-        <img src="https://pngimg.com/uploads/heart/heart_PNG51335.png" alt="Heart">
+        <img src="https://cdn.pixabay.com/photo/2014/04/02/10/47/red-304570_1280.png" alt="Heart">
         <div class="msg">Ủng hộ mình nhéee <3</div>
     </div>
-
-
+</div>
 
     <script src="script.js"></script>
 </body>
